@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <style>
+        #pyramid {
+            line-height: 0;
+            font-size: 30px;
+        }
+
+        body {
+            font-family: "Courier New", monospace;
+            text-align: center;
+        }
+
+        #select-height {
+            font-family: "Courier New", monospace;
+            fontsize: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Pyramid Slide</h1>
+
+    <p>When you say</p>
+    <p><strong>Draw a pyramid</strong></p>
+    <p>I say:</p>
+    <br>
+    <form id="draw-form">
+        <label>
+            How high?
+            <label id="select-height"></label>
+        </label>
+        <br><br>
+        <input id="slider" type="range" min="1" max="100" oninput="drawPyramid(this.value)">
+    </form>
+    <br><br>
+    <div id="pyramid"></div>
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="mario-slide.js"></script>
+</body>
+</html>
